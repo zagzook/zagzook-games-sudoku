@@ -8,6 +8,7 @@ export const gameTimer = document.querySelector('#game-time')
 export const resultTime = document.querySelector('#result-time')
 export const gameError = document.querySelector('#game-err')
 export const numberKeys = document.querySelector('.numbers')
+export const gridTitle = document.querySelector('#grid-type-title')
 export const tilePath = 'assets/images/tiles/'
 // end misc
 
@@ -24,7 +25,8 @@ export const btnNewGameError = document.querySelector('#btn-new-game-3')
 export const btnRestartGameError = document.querySelector('#btn-restart')
 export const btnDelete = document.querySelector('#btn-delete')
 export const playerName = document.querySelector('#player-name')
-export const btnGridSize = document.querySelector('#btn-Grid-Size')
+export const btnGridSize = document.querySelector('#btn-grid-size')
+export const btnGameType = document.querySelector('#btn-game-type')
 // end buttons
 
 // screens

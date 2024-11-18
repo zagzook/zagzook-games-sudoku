@@ -20,10 +20,9 @@
       <a href="/" class="nav-logo">
         <img src="./assets/images/logo.png" alt="" srcset="" />
       </a>
-      <div class="tile-name">Sudoku</div>
       <div class="nav-icons">
-        <i class="bx bxs-user"></i>
-        <i class="bx bxs-cog"></i>
+        <!-- <i class="bx bxs-user"></i>
+        <i class="bx bxs-cog"></i> -->
 
         <div class="dark-mode-toggle" id="dark-mode-toggle">
           <i class="bx bxs-sun"></i>
@@ -41,7 +40,7 @@
           <div class="start-screen active" id="start-screen">
             <input type="text" placeholder="Your Name" class="input-name" id="input-name" />
             <div class="btn" id="btn-level">Easy</div>
-            <div class="btn" id="btn-Grid-Size">9X9 Grid</div>
+            <div class="btn" id="btn-grid-size">9X9 Grid</div>
             <div class="btn" id="btn-game-type">Numbers</div>
             <div class="btn" id="btn-continue">Continue</div>
             <div class="btn btn-blue" id="btn-play">New Game</div>
@@ -50,10 +49,11 @@
 
           <!-- game screen -->
           <div class="main-game" id="game-screen">
-            <!-- 9X9 Grid Cells -->
-            <div class="main-sudoku-grid" id="main-sudoku-grid"></div>
-            <!-- end 9X9 Grid Cells -->
-            <!-- main game info for 9X9 Grid -->
+            <div class="grid-type-title" id="grid-type-title">GRID 9X9 Numbers</div>
+            <!-- Grid Cells -->
+            <div class="main-sudoku-grid game-font" id="main-sudoku-grid"></div>
+            <!-- end Grid Cells -->
+            <!-- main game info for Grid -->
             <div class="main-game-info">
               <div class="main-game-info-box main-game-info-name">
                 <span id="player-name">Jeff</span>
@@ -73,13 +73,19 @@
                 <span id="game-err">Errors: 0/3</span>
               </div>
             </div>
-            <!-- end main game info for 9X9 Grid -->
-            <!-- 9X9 keyboard -->
-            <div class="numbers game-font"></div>
-            <!-- end 9X9 keyboard -->
+            <!-- end main game info for Grid -->
+            <!-- keyboard -->
+            <div class="numbers game-font" id="numbers-keys"></div>
+            <!-- end keyboard -->
           </div>
-
           <!-- end game screen -->
+
+          <!-- pause screen -->
+          <div class="pause-screen" id="pause-screen">
+            <div class="btn btn-blue" id="btn-resume">Resume</div>
+            <div class="btn" id="btn-new-game">New Game</div>
+          </div>
+          <!-- end pause screen -->
         </div>
         <!-- end screens -->
       </div>

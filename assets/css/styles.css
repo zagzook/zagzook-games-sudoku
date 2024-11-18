@@ -58,10 +58,20 @@ html {
 
   --font-size: 2.4rem;
   --font-size-lg: 3.2rem;
-  --font-size-xl: 4.8rem;
+  --font-size-xl: 4rem;
   --font-game-regular: 3rem;
   --font-game-lg: 4rem;
-  --font-game-xl: 5rem;
+  --font-game-xl: 4rem;
+
+  --color-1: #800000;
+  --color-2: #e6194b;
+  --color-3: #f58231;
+  --color-4: #3cb44b;
+  --color-5: #000075;
+  --color-6: #808000;
+  --color-7: #42d4f4;
+  --color-8: #f032e6;
+  --color-9: #dcbeff;
 }
 
 .dark {
@@ -119,7 +129,7 @@ nav {
 }
 
 .nav-container {
-  max-width: 96rem;
+  max-width: 108rem;
   margin: auto;
   display: flex;
   align-items: center;
@@ -199,27 +209,30 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 0%;
+  height: 0%;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
+  display: none;
+}
+
+.start-screen.active {
+  transform: translateX(0);
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.start-screen.active {
-  transform: translateX(0);
-}
-
 .start-screen > * + * {
-  margin-top: 20px;
+  margin-top: 1.2rem;
 }
 
 .input-name {
-  height: 80px;
-  width: 280px;
+  height: 8rem;
+  width: 28rem;
   border-radius: var(--border-radius);
   outline: 0;
   background-color: var(--bg-main);
@@ -229,8 +242,8 @@ nav {
 }
 
 .btn {
-  height: 80px;
-  width: 280px;
+  height: 8rem;
+  width: 28rem;
   background-color: var(--bg-main);
   color: var(--color-txt);
   border-radius: var(--border-radius);
@@ -257,10 +270,10 @@ nav {
     transform: translateX(0);
   }
   25% {
-    transform: translateX(20px);
+    transform: translateX(2rem);
   }
   50% {
-    transform: translateX(-20px);
+    transform: translateX(-2rem);
   }
   100% {
     transform: translateX(0);
@@ -270,10 +283,7 @@ nav {
 /* 9X9 Grid */
 
 .main-game {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: start;
+  display: none;
   padding: 3rem 0;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
@@ -281,6 +291,22 @@ nav {
 
 .main-game.active {
   transform: translateX(0);
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.grid-type-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-size: var(--font-game-lg);
+  color: var(--blue);
+}
+
+.main-sudoku-grid {
+  font-size: var(--font-size-xl);
 }
 
 .main-sudoku-grid.grid-4 {
@@ -310,10 +336,9 @@ nav {
 .main-grid-cell {
   border-radius: var(--border-radius);
   background-color: var(--bg-main);
-  color: var(--blue);
   display: grid;
   place-items: center;
-  font-size: var(--font-size);
+  font-size: var(--font-size-xl);
   cursor: pointer;
 }
 .grid-4X4 {
@@ -336,9 +361,41 @@ nav {
   width: var(--sudoku-cell-size-9);
 }
 
+.color-main {
+  color: var(--color-txt) !important;
+}
+
+.color-1 {
+  color: var(--color-1);
+}
+.color-2 {
+  color: var(--color-2);
+}
+.color-3 {
+  color: var(--color-3);
+}
+.color-4 {
+  color: var(--color-4);
+}
+.color-5 {
+  color: var(--color-5);
+}
+.color-6 {
+  color: var(--color-6);
+}
+.color-7 {
+  color: var(--color-7);
+}
+.color-8 {
+  color: var(--color-8);
+}
+.color-9 {
+  color: var(--color-9);
+}
+
 .main-grid-cell.filled {
   background-color: var(--filled-bg);
-  color: var(--filled-color);
+  /* color: var(--filled-color); */
 }
 
 .main-grid-cell.selected {
@@ -437,17 +494,16 @@ nav {
   grid-template-columns: repeat(5, 1fr);
   gap: 0.5rem;
 }
-.numbers.game-font {
+.game-font {
   font-family: zagzookGames;
 }
 
 .number {
   border-radius: var(--border-radius);
   background-color: var(--filled-bg);
-  color: var(--color-txt);
   display: grid;
   place-items: center;
-  font-size: var(--font-game-lg);
+  font-size: var(--font-game-xl);
   cursor: pointer;
 }
 
@@ -491,4 +547,36 @@ nav {
   grid-column: span 2;
 }
 
-/* end 9X9 Grid */
+.pause-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-body);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+
+.pause-screen.active {
+  display: flex;
+}
+
+.pause-screen > * + * {
+  margin-top: 2rem;
+}
+
+.pause-screen.active .btn {
+  animation: zoom-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
