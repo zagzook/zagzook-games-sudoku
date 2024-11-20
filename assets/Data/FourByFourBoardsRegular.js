@@ -1,4 +1,4 @@
-export const easySolution = [
+export const easySolutionR4 = [
   '3214143241232341',
   '1243431234212134',
   '4123321414322341',
@@ -1001,7 +1001,7 @@ export const easySolution = [
   '3214412323411432',
 ]
 
-export const easyBoardTemplate = [
+export const easyBoardTemplateR4 = [
   '----11--1-1--111',
   '-1-1--11-11--1--',
   '--1111---1----11',
@@ -2004,7 +2004,7 @@ export const easyBoardTemplate = [
   '---111--11----11',
 ]
 
-export const normalSolution = [
+export const normalSolutionR4 = [
   '2413314242311324',
   '2413314213244231',
   '1234432134122143',
@@ -3007,7 +3007,7 @@ export const normalSolution = [
   '1243342121344312',
 ]
 
-export const normalBoardTemplate = [
+export const normalBoardTemplateR4 = [
   '-1-111----1-1--1',
   '1-1-1--1--1-11--',
   '1--1--11-1---1-1',
@@ -4010,7 +4010,7 @@ export const normalBoardTemplate = [
   '1-1--11---1111--',
 ]
 
-export const hardSolution = [
+export const hardSolutionR4 = [
   '4231132431422413',
   '2431134231244213',
   '4213312424311342',
@@ -5013,7 +5013,7 @@ export const hardSolution = [
   '4132324123141423',
 ]
 
-export const hardBoardTemplate = [
+export const hardBoardTemplateR4 = [
   '----1-1------1-1',
   '-11----11-1-----',
   '--1-1----1-1--1-',

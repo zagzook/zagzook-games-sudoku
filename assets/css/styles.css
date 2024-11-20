@@ -91,7 +91,7 @@ html {
 
 body {
   font-family: roboto-regular;
-  height: 10vh;
+  height: 100vh;
   font-size: var(--font-size);
   background-color: var(--bg-body);
   overflow-x: hidden;
@@ -129,7 +129,7 @@ nav {
 }
 
 .nav-container {
-  max-width: 108rem;
+  max-width: 54rem;
   margin: auto;
   display: flex;
   align-items: center;
@@ -192,7 +192,7 @@ nav {
 
 .main {
   height: 100vh;
-  padding-top: var(--nav-size);
+  padding-top: var(--nav-size)-4rem;
   display: grid;
   place-items: center;
 }
@@ -240,7 +240,16 @@ nav {
   font-size: var(--font-size-lg);
   text-align: center;
 }
-
+.game-image {
+  height: 35rem;
+  width: 35rem;
+  border-radius: var(--border-radius);
+  display: grid;
+  place-items: center;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
 .btn {
   height: 8rem;
   width: 28rem;
